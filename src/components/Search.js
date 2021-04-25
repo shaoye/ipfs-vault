@@ -34,7 +34,7 @@ class Search extends Component {
                             type="text"
                             ref={(input) => { this.fileToken = input }}
                             className="form-control text-monospace"
-                            placeholder="file token"
+                            placeholder="file password"
                             required />                          
                       </div>
                     {/* <input type="file" onChange={this.props.captureFile} className="text-dark text-monospace"/> */}

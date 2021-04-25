@@ -27,7 +27,7 @@ class Main extends Component {
                             type="text"
                             ref={(input) => { this.fileDescription = input }}
                             className="form-control text-monospace"
-                            placeholder="description"
+                            placeholder="Enter file description here"
                             required />
                         {/* <br></br>
                           <input
@@ -43,7 +43,7 @@ class Main extends Component {
                             type="password"
                             ref={(input) => { this.fileToken = input }}
                             className="form-control text-monospace"
-                            placeholder="file token"
+                            placeholder="Enter password here"
                             required />                          
                       </div>
                     <input type="file" onChange={this.props.captureFile} className="text-dark text-monospace"/>
@@ -63,7 +63,7 @@ class Main extends Component {
                     <th scope="col" style={{ width: '120px'}}>IPFS Hash</th>
                     <th scope="col" style={{ width: '120px'}}>File description</th>
                     {/* <th scope="col" style={{ width: '120px'}}>Organization</th> */}
-                    <th scope="col" style={{ width: '120px'}}>File token</th>
+                    <th scope="col" style={{ width: '120px'}}>File password</th>
                     <th scope="col" style={{ width: '120px'}}>File preview</th>
                   </tr>
                 </thead>
