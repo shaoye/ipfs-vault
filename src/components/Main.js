@@ -52,13 +52,12 @@ class Main extends Component {
                   </form>
               </div>
               <p>&nbsp;</p>
+              <div className="card mb-3 mx-auto">
               <table className="table-sm table-bordered text-monospace" style={{ width: '1.24', maxHeight: '450px'}}>
                 <thead style={{ 'fontSize': '15px' }}>
                   <tr className="bg-info text-white">
                     <th scope="col" style={{ width: '10px'}}>ID</th>
                     <th scope="col" style={{ width: '200px'}}>File name</th>
-                    <th scope="col" style={{ width: '120px'}}>File type</th>
-                    <th scope="col" style={{ width: '90px'}}>Size</th>
                     <th scope="col" style={{ width: '90px'}}>Upload Date</th>
                     <th scope="col" style={{ width: '120px'}}>IPFS Hash</th>
                     <th scope="col" style={{ width: '120px'}}>File description</th>
@@ -73,8 +72,6 @@ class Main extends Component {
                       <tr>
                         <td>{file.fileId}</td>
                         <td>{file.fileName}</td>
-                        <td>{file.fileType}</td>
-                        <td>{convertBytes(file.fileSize)}</td>
                         <td>{moment.unix(file.uploadTime).format('h:mm:ss A M/D/Y')}</td>
                         <td>{file.fileHash}</td>
                         <td>{file.fileDescription}</td>
@@ -86,6 +83,7 @@ class Main extends Component {
                   )
                 })}
               </table>
+              </div>
             </div>
           </main>
         </div>

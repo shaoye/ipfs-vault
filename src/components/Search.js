@@ -26,15 +26,15 @@ class Search extends Component {
                             type="text"
                             ref={(input) => { this.fileId = input }}
                             className="form-control text-monospace"
-                            placeholder="file id"
+                            placeholder="Enter file ID here"
                             required />
                         <br></br>
                           <input
                             id="fileToken"
-                            type="text"
+                            type="password"
                             ref={(input) => { this.fileToken = input }}
                             className="form-control text-monospace"
-                            placeholder="file password"
+                            placeholder="Enter password here"
                             required />                          
                       </div>
                     {/* <input type="file" onChange={this.props.captureFile} className="text-dark text-monospace"/> */}
@@ -42,16 +42,13 @@ class Search extends Component {
                   </form>
               </div>
               <p>&nbsp;</p>
-              
+              <div className="card mb-3 mx-auto">
               <table className="table-sm table-bordered text-monospace" style={{ width: '1.24', maxHeight: '450px'}}>
                 <thead style={{ 'fontSize': '15px' }}>
                   <tr className="bg-info text-white">
                     <th scope="col" style={{ width: '10px'}}>ID</th>
-                    <th scope="col" style={{ width: '200px'}}>File name</th>
-                    <th scope="col" style={{ width: '120px'}}>File type</th>
-                    <th scope="col" style={{ width: '90px'}}>Size</th>
                     <th scope="col" style={{ width: '90px'}}>Upload Date</th>
-                    <th scope="col" style={{ width: '120px'}}>Uploader address</th>
+                    <th scope="col" style={{ width: '120px'}}>Issuer address</th>
                     <th scope="col" style={{ width: '120px'}}>IPFS Hash</th>
                     <th scope="col" style={{ width: '120px'}}>File description</th>
                     <th scope="col" style={{ width: '120px'}}>File preview</th>
@@ -62,9 +59,6 @@ class Search extends Component {
                     <thead style={{ 'fontSize': '12px' }} key={key}>
                       <tr>
                         <td>{result.returnValues.fileId}</td>
-                        <td>{result.returnValues.fileName}</td>
-                        <td>{result.returnValues.fileType}</td>
-                        <td>{convertBytes(result.returnValues.fileSize)}</td>
                         <td>{moment.unix(result.returnValues.uploadTime).format('h:mm:ss A M/D/Y')}</td>
                         <td>{result.returnValues.uploader}</td>
                         <td>{result.returnValues.fileHash}</td>
@@ -75,6 +69,7 @@ class Search extends Component {
                   )
                 })}
               </table>
+              </div>
             </div>
           </main>
         </div>
